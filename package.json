@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "nodemon src/index.ts",
+    "start": "npm run server",
+    "server": "nodemon src/index.ts",
     "client": "npm run start --prefix ../client",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
