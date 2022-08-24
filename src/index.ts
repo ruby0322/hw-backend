@@ -18,8 +18,8 @@ mongoose
     console.log(err);
   });
 
-const port = process.env.SERVER_PORT;
+const port = process.env.PORT;
 
-app.listen(port, () => {
+app.listen(port || 5000, () => {
   console.log(`Node.js server is listening on ${port}.`);
 });
