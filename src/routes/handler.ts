@@ -14,10 +14,9 @@ router.get('/', async (req: Request, res: Response) => {
 router.get('/info', async (req: Request, res: Response) => {
   const users = await User.find({});
   // console.log(users);
-  res.send({
-    'res': users,
-    'Access-Control-Allow-Origin': 'https://hw-platform.herokuapp.com'
-  });
+  const headers = {'Access-Control-Allow-Origin': 'https://hw-platform.herokuapp.com'};
+  res.set(headers);
+  res.send(users);
 });
 
 export default router;
